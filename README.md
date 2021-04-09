@@ -26,7 +26,7 @@ While this application was fairly challenging to create, I have a much better un
             
 ## Installation
 
-To avoid additional installation steps, the most recent deployed version of this application can be viewed on Heroku:
+To avoid additional installation steps, the most recent deployed version of this application can be viewed on Heroku: https://note-taker-144.herokuapp.com/
 
 Otherwise, for this application to run correctly, express is a dependency that should be installed. After the code has been cloned to a repository, navigate to the repository and run  ```npm init -y ``` then ```npm install express```.
 
@@ -35,6 +35,15 @@ To start the application from the command line after installations have been com
 ## Usage
 
 This application is intended to be used to write and store simple notes. Additional functionality will be added in the future.
+
+A gif that demonstrates how to create a note:
+
+![GIF of creating a note](/public/assets/gifs/note-creation.gif)
+
+A gif that demonstrates how to toggle between notes and create a note after viewing previous notes (which are read only):
+
+![GIF of creating a note](/public/assets/gifs/note-toggle.gif)
+
 
 ## License
 
