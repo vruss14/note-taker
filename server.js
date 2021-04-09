@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const fs = require('fs');
 const path = require('path');
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 const notesDatabase = require('./db/db.json');
 
 app.use(express.static('public')); // Important to load the CSS and index.js files successfully
