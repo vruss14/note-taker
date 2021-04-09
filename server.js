@@ -1,5 +1,4 @@
 const express = require('express');
-const { fstat } = require('fs');
 const app = express();
 const fs = require('fs');
 const path = require('path');
@@ -26,7 +25,7 @@ app.get('/api/notes', function (request, response) {
 // Adds new notes to the database, updates the JSON file, and returns new notes after they have been saved
 app.post('/api/notes', function (request, response) {
 
-    if (notesDatabase === null) {
+    if (notesDatabase === undefined) {
         return;
     }
 
@@ -35,6 +34,11 @@ app.post('/api/notes', function (request, response) {
     let note = request.body;
 
     notesDatabase.push(note);
+
+    // Gives each note an ID based on its index
+    for(let i = 0; i < notesDatabase.length; i++) {
+        notesDatabase[i].id = i+1;
+    }
 
     fs.writeFile(dataPath, JSON.stringify(notesDatabase), function (err) {
         if(err) {
