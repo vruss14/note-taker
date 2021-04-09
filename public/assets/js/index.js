@@ -136,15 +136,17 @@ const renderNoteList = async (notes) => {
 
     liEl.append(spanEl);
 
+    // Temporarily removed delete buttons to avoid user confusion
+
     if (delBtn) {
       const delBtnEl = document.createElement('i');
-      delBtnEl.classList.add(
-        'fas',
-        'fa-trash-alt',
-        'float-right',
-        'text-danger',
-        'delete-note'
-      );
+      // delBtnEl.classList.add(
+      //   'fas',
+      //   'fa-trash-alt',
+      //   'float-right',
+      //   'text-danger',
+      //   'delete-note'
+      // );
       delBtnEl.addEventListener('click', handleNoteDelete);
 
       liEl.append(delBtnEl);
